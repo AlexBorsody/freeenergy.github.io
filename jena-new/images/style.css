@@ -1,0 +1,927 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	font-family:"Trebuchet MS", "Myriad Pro", Arial, sans-serif;
+	font-size:14px;
+
+	
+/* IE10 Consumer Preview */ 
+background-image: -ms-linear-gradient(bottom, #D8D4D4 0%, #FFFFFF 84%, #D8D4D4 100%) repeat scroll 0 0 transparent;
+
+/* Mozilla Firefox */ 
+background: -moz-linear-gradient(center bottom , #D8D4D4 0%, #FFFFFF 84%, #D8D4D4 100%) repeat scroll 0 0 transparent;
+
+/* Opera */ 
+background-image: -o-linear-gradient(bottom, #D8D4D4 0%, #FFFFFF 84%, #D8D4D4 100%);
+
+/* Webkit (Safari/Chrome 10) */ 
+
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #E6E6E6), color-stop(0.8, white), color-stop(1, #EBEBEB));
+
+/* Webkit (Chrome 11+) */ 
+
+	background-image: -webkit-linear-gradient(bottom, #F1F1F1 0%, white 84%, #EBEBEB 100%) repeat scroll 0 0 transparent;
+
+/* W3C Markup, IE10 Release Preview */ 
+
+	background-image: linear-gradient(to top, #ECECEC 0%, white 84%, #E4E4E4 100%) repeat scroll 0 0 transparent;
+	
+	overflow-x:hidden;
+}
+	
+
+h1{
+	font-size:56px;
+	color:#ccc;
+}
+h2{
+	font-size:20px;
+	padding:10px 0px 10px 0px;
+	margin:15px 0px 20px 0px;
+}
+a{
+	color:#555;
+	text-decoration:none;
+}
+a:hover{
+	color:#222;
+}
+p{
+	padding:5px 0px;
+}
+.wrapper{
+	/*width: 1180px;*/
+	margin:0px auto;
+	height: 65px;
+}
+.clear{
+	clear:both;
+}
+footer {
+height: 50px;
+position: relative;
+bottom: 30px;
+left: 114px;
+}
+.footer a{
+	margin:0px 20px;
+}
+/* Slider Style */
+.pxs_container{
+	width:100%;
+	height:661px;
+	position:relative;
+	overflow:hidden;
+	top: 40px;
+    /*	-moz-box-shadow:0px 0px 7px #000;
+	-webkit-box-shadow:0px 0px 7px #000;
+	box-shadow:0px 0px 7px #000;*/
+}
+.pxs_bg{
+	/*background:transparent url(../images/bg.png) repeat top left;*/
+}
+.pxs_bg div{
+	position:absolute;
+	margin: 0 auto;
+	top:0px;
+	left:0px;
+	width:956px; /*1264px window width times number of images*/
+	height:626px;
+	background-repeat: no-repeat;
+	background-position:center;
+	background-color:transparent;
+}
+
+.pxs_bg div div{
+	position:absolute;
+}
+
+.pxs_bg .pxs_bg1{
+	background-image:url(../img/bg_1.png);
+	position: relative;
+	
+	/*left negative 1/8 of ww*/
+}
+.pxs_bg .pxs_bg2{
+	background-image:url(../img/bg_2.png);
+/*	background-image:url(../images/bg2.png);*/
+	/*left negative 1/4 of ww*/
+	 background-position: center bottom;
+	 width: 21471px;
+}
+.pxs_bg .pxs_bg3{
+	background-image:url(../img/bg_3.png);
+/*	background-image:url(../images/bg3.png);*/
+	/*left negative 1/2 of ww*/
+	 background-position: center bottom;
+	 width: 21471px;
+}
+
+.pxs_bg .pxs_bg4{
+	background-image:url(../img/bg_4.png);
+/*	background-image:url(../images/bg3.png);*/
+	/*left negative 1/2 of ww*/
+	 background-position: center bottom;
+	 width: 21471px;
+}
+
+.pxs_slider_wrapper{
+	display:none;
+}
+.pxs_container ul{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+ul.pxs_slider{
+	position:absolute;
+	left:0px;
+	top:0px;
+	height:626px;
+}
+ul.pxs_slider li {
+	/*height:420px;*/
+	float:left;
+	position:relative;
+}
+
+ul.pxs_slider li .hh {
+	display:none;
+    margin: 0 auto 0;
+    width: 1068px;
+}
+
+ul.pxs_slider li img {
+	display:block;
+	margin: 0 auto;
+	/*margin:35px auto 0;*/
+}
+
+ul.pxs_slider .dtext img {
+	display:block;
+	margin:88px auto 0;
+}
+
+ul.pxs_slider .dtext2 img {
+    display: block;
+    margin: 36px auto 0;
+    padding: 0 0 0 29px;
+}
+
+ul.pxs_thumbnails{
+	height:35px;
+	position:absolute;
+	top:320px;
+	left:50%;
+	display: none;
+}
+
+ul.pxs_thumbnails li{
+	position:absolute;
+	display:block;
+}
+
+ul.pxs_thumbnails li img{
+	border: 5px solid #FFFFFF;
+	-moz-box-shadow:1px 1px 7px #555;
+	-webkit-box-shadow:1px 1px 7px #555;
+	box-shadow:1px 1px 7px #555;
+	cursor:pointer;
+	display:block;
+	opacity:0.7;
+}
+
+ul.pxs_thumbnails li.selected img{
+	opacity:1.0;
+}
+
+.pxs_navigation span{
+	position: absolute;
+	width: 30px;
+	height: 508px;
+	cursor: pointer;
+}
+.pxs_navigation span:hover{
+	opacity:0.9;
+}
+.pxs_navigation span.pxs_prev{
+	background: url(../img/prev.png) no-repeat center center;
+	opacity:0;
+}
+.pxs_navigation span.pxs_next{
+	background: url(../img/next.png) no-repeat center center;
+	opacity:0;
+}
+.pxs_loading{
+	color:#fff;
+	font-size:20px;
+	padding:15px 15px 15px 50px;
+	position:absolute;
+	background:#333 url(../images/ajax-loader.gif) no-repeat 10px 50%;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;
+	opacity:0.7;
+	width:180px;
+	position:absolute;
+	top:150px;
+	left:50%;
+	margin-left:-90px;
+}
+
+#logo {
+    display: block;
+   
+  /*  height: 178px;
+    line-height: 174px;*/
+    vertical-align: middle;
+}
+
+.descript {
+    font-size: 20px;
+    text-align: center;	
+}
+
+.descriptsmall {
+   text-align: center;
+   line-height: 0.5;
+}
+
+il.pxs_slider li.first {
+  background: url(../img/about.png) no-repeat center center;	
+}
+
+.nav {
+	float: right;
+}
+
+.nav ul li {
+
+}
+
+.nav li a {
+	font-family: Arial;
+	color: white;
+	font-size: 16px;
+	background: url(../img/bullet.png) no-repeat 50% 25px transparent;
+	display: block;
+	height: 35px;
+	/* fix */
+}
+
+.nav li {
+   display: inline-table;
+    font-size: 12px;
+    height: 8px;
+    margin: 0;
+    padding: 0 39px 0 0;
+    text-align: -moz-center;
+    /*width: 150px;*/
+}
+
+.nav li.active a {
+    background: url(../img/bullet2.png) no-repeat 50% 25px transparent;
+}
+
+.nav li div a {
+  text-align: center;	
+}
+
+.socplugins {
+
+  text-align: center;
+}	
+
+.socplugins div {
+  display: inline;
+  position:relative;
+
+  vertical-align: top;
+  margin: 2px;
+}
+
+#___plusone_0 {
+ width: 68px !important;	
+}
+
+iframe.twitter-share-button {
+	width: 82px !important;
+}
+
+.nav li div {
+    color: #FFFFFF;
+    font-size: 16px;
+    margin: 0 0 8px;
+    font-family: Arial;
+}
+
+#logo .logimg {
+margin-left: 299px;
+position: absolute;
+width: 191px;
+z-index: 999;
+}
+
+.wrapper .switcher {
+  margin: 16px 160px 0 0;
+}
+
+footer {
+	height: 50px;
+}
+
+.dtext3 {
+ margin: 22px 0 0;	
+}
+
+.dtext, .dtext2 {
+    display: block;
+    margin: 20px 0 0;	
+}
+
+.dtext span a, .dtext2 span a, .dtext3 span a {
+    background: url(../img/shopbutton.png) no-repeat scroll center bottom transparent;
+    font-size: 0;
+    height: 20px;
+    padding: 12px 50px !important;
+    width: 100px;
+    padding: 5px;
+}
+
+.shopbutton {
+	display: block;
+	text-align: center;
+}
+
+.slideshow {
+  position: absolute;	
+}
+
+.pxs_slider_wrapper li.first #container {
+	/*width: 440px;*/
+	width: 434px;
+	height: 241px;
+	
+	overflow: hidden;
+	margin: 0 auto;
+	
+	top: 26px;
+	position: relative;
+	
+	border-radius: 6px;
+border: 11px solid white;
+}
+
+.bbox {
+    display: block;
+    position: absolute;
+    width: 124%;
+}
+
+.pxs_slider_wrapper li.first #container img {
+	width: 434px!important;
+	/* fix */
+}
+
+.f {
+	width: 956px;
+}
+
+ul.pxs_slider li.first .f img {
+position: relative;
+left: 380px;
+float: left;
+top:39px;
+}
+
+.pxs_slider_wrapper .hh span {
+  color: #353F75;
+  font-weight: bolder;
+}
+
+
+ul.pxs_slider .hh p {
+  margin: 25px 2px 0 0;
+  line-height: 1.3;
+}
+
+ul.pxs_slider .dtext .ontime {
+	 background: url(../img/text/ontime.png) no-repeat scroll left top transparent;
+	   margin: -312px 21px 0 0;
+    display: block;
+    font-size: 12px;
+   float: right;
+    text-align: left;
+    width: 352px;
+	position: relative;
+
+}
+
+ul.pxs_slider .dtext .tights {
+	 background: url(../img/text/tightsaway.png) no-repeat scroll left top transparent;
+	margin: -144px 32px 0 0;
+    display: block;
+    font-size: 12px;
+    float: right;
+    text-align: left;
+    width: 352px;
+	position: relative;
+
+}
+
+ul.pxs_slider .dtext .tall {
+	/* background: url(../img/text/tallboatsof.png) no-repeat scroll left top transparent;
+	margin: -30px 56px 0 0;
+    display: block;
+    font-size: 12px;
+    float: right;
+    text-align: left;
+    width: 352px;*/
+	
+	position: relative;
+	background: url(../img/text/tallboatsof.png) no-repeat scroll left top transparent;
+	margin: -30px 56px 0 0;
+	display: block;
+	font-size: 12px;
+	float: left;
+	text-align: left;
+	width: 352px;
+	right: -655px;
+
+}
+
+ul.pxs_slider .dtext .leather {
+    background: url(../img/text/leatheronthego.png) no-repeat scroll right top transparent;	
+    display: block;
+    font-size: 12px;
+    margin: 0 0 2px 25px;
+    position: absolute;
+    text-align: right;
+    top: 297px;
+    width: 352px;
+
+}
+
+ul.pxs_slider .dtext .datedenim {
+    background: url(../img/text/date-denim-shirt.png) no-repeat scroll right top transparent;
+    margin: -12px 0 0 48px;
+    display: block;
+    font-size: 12px;
+    position: absolute;
+    text-align: right;
+    width: 352px;	
+
+}
+
+ul.pxs_slider .dtext2 .pocket {
+    background: url(../img/text/pocket.png) no-repeat scroll right top transparent;	
+    display: block;
+    font-size: 12px;
+    margin: 120px 0 0 74px;
+    position: absolute;
+    text-align: right;
+    width: 352px;
+}
+
+ul.pxs_slider .dtext2 .boots {
+    background: url(../img/text/boots.png) no-repeat scroll right top transparent;
+    margin: 238px 0 0 52px;
+    display: block;
+    font-size: 12px;
+    position: absolute;
+    text-align: right;
+    width: 352px;	
+}
+ul.pxs_slider .dtext2 .perfect {
+    background: url(../img/text/perfect.png) no-repeat scroll left top transparent;
+    margin: -260px 46px 0 0;
+    display: block;
+    font-size: 12px;
+    float: right;
+    text-align: left;
+    width: 352px;
+
+}
+
+ul.pxs_slider .dtext2 .kneehighs {
+    background: url(../img/text/kneehighs.png) no-repeat scroll left top transparent;
+    margin: -108px 20px 0 0;
+    display: block;
+    font-size: 12px;
+    float: right;
+    text-align: left;
+    width: 352px;
+
+}
+
+
+
+
+
+ul.pxs_slider .dtext3 .theperfecttee {
+	 background: url(../img/text/theperfecttee.png) no-repeat scroll right top transparent;
+	margin: 10px 0 0 66px;
+	   position: absolute;
+    display: block;
+    font-size: 12px;
+   float: right;
+    text-align: left;
+    width: 352px;
+
+}
+
+ul.pxs_slider .dtext3 .bracelet {
+	 background: url(../img/text/bracelet.png) no-repeat scroll right top transparent;
+   display: block;
+	position: absolute;
+    display: block;
+    font-size: 12px;
+  margin: 122px 0 0 66px;
+    text-align: right;
+    width: 352px;
+
+}
+
+ul.pxs_slider .dtext3 .simpletote {
+	 background: url(../img/text/simpletote.png) no-repeat scroll right top transparent;
+    margin: 234px 0 0 -18px;
+    display: block;
+    position: absolute;
+    font-size: 12px;
+    float: right;
+    text-align: right;
+    width: 352px;
+
+}
+
+
+ul.pxs_slider .dtext3 .scarling {
+    background: url(../img/text/scarling.png) no-repeat scroll left top transparent;
+    margin: -342px -18px 0 0;
+    display: block;
+    font-size: 12px;
+    float: right;
+    text-align: left;
+    width: 352px;
+}
+ul.pxs_slider .dtext3 .cardigan {
+    background: url(../img/text/justcardigan.png) no-repeat scroll left top transparent;
+    margin: -190px 48px 0 0;
+    display: block;
+    font-size: 12px;
+    float: right;
+    text-align: left;
+    width: 352px;
+
+}
+
+ul.pxs_slider .dtext3 .favoritedenim {
+    background: url(../img/text/favoritedenim.png) no-repeat scroll left top transparent;
+    margin: -104px 44px 0 0;
+    display: block;
+    font-size: 12px;
+    float: right;
+    text-align: left;
+    width: 352px;
+
+}
+
+ul.pxs_slider .dtext3 .blackflats {
+    background: url(../img/text/blackflats.png) no-repeat scroll left top transparent;
+    margin: -18px -20px 0 0;
+    display: block;
+    font-size: 12px;
+    float: right;
+    text-align: left;
+    width: 352px;
+
+}
+
+
+
+ul.pxs_slider .dtext .datedenim .tated1 {display: none; float: right; right: -195px; top: 50px; position: absolute;	width: 50px; height: 50px; padding: 10px; border-radius: 50%; background-repeat: no-repeat; background-position: 0 50%; border: 5px solid #fff; background: #000;}
+ul.pxs_slider .dtext .datedenim .tated21 {float: right; right: -195px; top: 50px; position: absolute;	width: 50px; height: 50px; padding: 10px; border-radius: 50%; background-repeat: no-repeat; background-position: 0 50%; margin: 5px; background:0!important; border:0;}
+
+ul.pxs_slider .dtext .leather .tated2 {display: none; float: right; right: -119px; top: 50px; position: absolute;	width: 50px; height: 50px; padding: 10px; border-radius: 50%; background-repeat: no-repeat; background-position: 0 50%; border: 5px solid #fff; background: #000;}
+ul.pxs_slider .dtext .leather .tated22 {float: right; right: -119px; top: 50px; position: absolute;	width: 50px; height: 50px; padding: 10px; border-radius: 50%; background-repeat: no-repeat; background-position: 0 50%; margin: 5px; background:0!important; border:0;}
+
+ul.pxs_slider .dtext .ontime .tated3 {display: none; float: left; left: -112px; top: 65px; position: absolute;	width: 50px; height: 50px; padding: 10px; border-radius: 50%; background-repeat: no-repeat; background-position: 0 50%; border: 5px solid #fff; background: #000;}
+ul.pxs_slider .dtext .ontime .tated23 {float: left; left: -112px; top: 65px; position: absolute;	width: 50px; height: 50px; padding: 10px; border-radius: 50%; background-repeat: no-repeat; background-position: 0 50%; margin: 5px; background:0!important; border:0;}
+
+ul.pxs_slider .dtext .tights .tated4 {display: none; float: left; left: -160px; top: -21px; position: absolute;	width: 50px; height: 50px; padding: 10px; border-radius: 50%; background-repeat: no-repeat; background-position: 0 50%; border: 5px solid #fff; background: #000;}
+ul.pxs_slider .dtext .tights .tated24 {float: left; left: -160px; top: -21px; position: absolute;	width: 50px; height: 50px; padding: 10px; border-radius: 50%; background-repeat: no-repeat; background-position: 0 50%; margin: 5px; background:0!important; border:0;}
+
+ul.pxs_slider .dtext .tall .tated5 {display: none; float: left; left: -133px; top: -19px; position: absolute;	width: 50px; height: 50px; padding: 10px; border-radius: 50%; background-repeat: no-repeat; background-position: 0 50%; border: 5px solid #fff; background: #000;}
+ul.pxs_slider .dtext .tall .tated25 {float: left; left: -133px; top: -19px; position: absolute;	width: 50px; height: 50px; padding: 10px; border-radius: 50%; background-repeat: no-repeat; background-position: 0 50%; margin: 5px; background:0!important; border:0;}
+
+
+
+
+ul.pxs_slider .dtext .datedenim .tated1 img {margin:0; padding:0;} 
+ul.pxs_slider .dtext .leather .tated1 img {margin:0; padding:0;}
+ul.pxs_slider .dtext .ontime .tated1 img {margin:0; padding:0;}
+ul.pxs_slider .dtext .tights .tated1 img {margin:0; padding:0;}
+ul.pxs_slider .dtext .tall .tated1 img {margin:0; padding:0;}
+
+
+
+/* FRo_OG style */
+
+.nav li a {
+text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
+font-family: Arial;
+color: #BBB;
+font-size: 16px;
+display: block;
+height: 38px;
+}
+
+.nav li.active a {
+text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
+-webkit-transition: all 0.5s ease;
+color: #0A2D55;
+}
+
+.nav li a:hover {
+	color: #0A2D55;
+	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8);
+	-webkit-transition: all 0.5s ease;
+}
+
+
+/* Media Queries */ 
+
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (min-width: 959px) and (max-width: 999px) {
+
+    #logo .logimg {
+margin-left: 100px;
+position: absolute;
+width: 191px;
+z-index: 999;
+}
+
+	.wrapper .switcher {
+		margin: 16px -10px 0 0;
+	}
+	
+	ul.pxs_slider li.first .f img {
+		left: 143px;
+		top:39px;
+		top:39px;
+	}
+	
+	.pxs_slider_wrapper li.first #container {
+		margin: -8px auto 0 433px;
+	}
+}
+
+/* Media Queries */ 
+
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {
+
+    #logo .logimg {
+margin-left: 30px;
+position: absolute;
+width: 191px;
+z-index: 999;
+}
+
+	.wrapper .switcher {
+		margin: 16px 0 0 0;
+	}
+	
+	ul.pxs_slider li.first .f img {
+		left: 115px;
+		top:39px;
+	}
+	
+
+	ul.pxs_slider li .hh {
+		width: 100%;
+	}	
+	
+	ul.pxs_slider .dtext .ontime {
+		margin: -322px 30px 0 0;
+		width: 282px;
+	}
+	
+	ul.pxs_slider .dtext .leather {
+		margin: 50px 0 2px 25px;
+		top: 237px;
+		width: 292px;
+	}
+	
+	ul.pxs_slider .dtext .datedenim {
+		margin: -26px 0 0 48px;
+		width: 292px;
+	}
+	
+	ul.pxs_slider .dtext .tights {
+		margin: -144px 32px 0 0;
+		width: 292px;
+	}
+	
+	ul.pxs_slider .dtext .tall {
+		margin: -30px 0 0 0;
+		right: -585px;
+	}
+	ul.pxs_slider .dtext2 .pocket {
+		margin: 110px 0 0 37px;
+		width: 322px;
+	}
+	
+	ul.pxs_slider .dtext2 .perfect {
+		margin: -275px 37px 0 0;
+		width: 292px;
+	}
+	
+	ul.pxs_slider .dtext2 .kneehighs {
+		margin: -118px 20px 0 0;
+		width: 292px;
+	}
+	
+	ul.pxs_slider .dtext2 .boots {
+		margin: 238px 0 0 55px;
+		width: 282px;
+	}
+	
+	ul.pxs_slider .dtext3 .theperfecttee {
+		width: 282px;
+		text-align: right;
+	}
+	
+	ul.pxs_slider .dtext3 .bracelet {
+		width: 282px;
+	}
+	
+	ul.pxs_slider .dtext3 .scarling {
+		margin: -342px 2px 0 0;
+		width: 282px;
+	}	
+	
+	ul.pxs_slider .dtext3 .cardigan {
+		margin: -219px 48px 0 0;
+		width: 262px;
+	}
+	
+	ul.pxs_slider .dtext3 .simpletote {
+		margin: 234px 0 0 22px;
+		width: 242px;
+	}	
+	
+	ul.pxs_slider .dtext3 .favoritedenim {
+		margin: -110px 59px 0 0;
+		width: 272px;
+	}
+	
+	ul.pxs_slider .dtext3 .blackflats {
+		margin: -8px 0px 0 0;
+		width: 272px;
+	}
+	
+	.pxs_slider_wrapper li.first #container {
+		margin: -8px auto auto 411px;
+	}
+}
+
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+	header h1,
+	header h1 a,
+	header h1 a img {
+		max-height: 60px;
+	}
+	
+	.nav li {
+		padding: 0 18px 0 0;
+	}
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+
+#logo .logimg {
+margin-left: -10px;
+position: absolute;
+width: 191px;
+z-index: 999;
+}
+
+
+	.nav li {
+		padding: 0 18px 0 0;
+	}
+
+	.pxs_slider_wrapper li.first #container {
+		width: 260px;
+	}
+
+	.nivo-controlNav {
+		margin: 0 0 0 106px!important;
+	}
+
+	ul.pxs_slider li.first .f img {
+		top:39px;
+		left: 23px;
+	}
+
+	ul.pxs_slider .dtext .ontime {
+		margin: -322px 30px 0 0;
+		width: 202px;
+	}
+	
+	ul.pxs_slider .dtext .leather {
+		margin: 50px 0 2px 25px;
+		top: 237px;
+		width: 202px;
+	}
+	
+	ul.pxs_slider .dtext .datedenim {
+		margin: -26px 0 0 48px;
+		width: 202px;
+	}
+	
+	ul.pxs_slider .dtext .tights {
+		margin: -148px 32px 0 0;
+		width: 202px;
+	}
+	
+	ul.pxs_slider .dtext .tall {
+		width: 242px;
+		margin: -30px 0 0 0;
+		right: -500px;
+	}
+	
+	
+	ul.pxs_slider .dtext2 .pocket {
+		margin: 110px 0 0 37px;
+		width: 232px;
+	}
+	
+	ul.pxs_slider .dtext2 .perfect {
+		margin: -275px 0px 0 0;
+		width: 242px;
+	}
+	
+	ul.pxs_slider .dtext2 .kneehighs {
+		margin: -118px 0px 0 0;
+		width: 220px;
+	}
+	
+	ul.pxs_slider .dtext2 .boots {
+		margin: 238px 0 0 15px;
+		width: 232px;
+	}
+	
+	ul.pxs_slider .dtext3 .theperfecttee {
+		width: 242px;
+		text-align: right;
+		margin: 10px 0 0 16px;
+	}
+	
+	ul.pxs_slider .dtext3 .bracelet {
+		width: 232px;
+		margin: 122px 0 0 30px;
+	}
+	
+	ul.pxs_slider .dtext3 .scarling {
+		margin: -358px 3px 0 0;
+		width: 182px;
+	}	
+	
+	ul.pxs_slider .dtext3 .cardigan {
+		margin: -234px 8px 0 0;
+		width: 212px;
+	}
+	
+	ul.pxs_slider .dtext3 .simpletote {
+		margin: 234px 0 0 15px;
+		width: 162px;
+	}	
+	
+	ul.pxs_slider .dtext3 .favoritedenim {
+		margin: -116px -3px 0 0;
+		width: 252px;
+	}
+	
+	ul.pxs_slider .dtext3 .blackflats {
+		margin: 0px;
+		width: 192px;
+	}
+
+
+}
+
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 767px) and (max-width: 480px) {
+
+
+
+}

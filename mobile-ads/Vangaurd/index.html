@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html id="index-page" class=" webkit iPad-section   gradient rgba opacity textshadow multiplebgs boxshadow borderimage borderradius cssreflections csstransforms csstransitions fontface  webkit iPad-section   gradient rgba opacity textshadow multiplebgs boxshadow borderimage borderradius cssreflections csstransforms csstransitions fontface  webkit Users-section Users-melaniemasserant-section Users-melaniemasserant-Desktop-section Users-melaniemasserant-Desktop-iPad-section   gradient rgba opacity textshadow multiplebgs boxshadow borderimage borderradius cssreflections csstransforms csstransitions fontface  webkit Users-section Users-melaniemasserant-section Users-melaniemasserant-Desktop-section Users-melaniemasserant-Desktop-iPad-section   gradient rgba opacity textshadow multiplebgs boxshadow borderimage borderradius cssreflections csstransforms csstransitions fontface  webkit Users-section Users-melaniemasserant-section Users-melaniemasserant-Desktop-section Users-melaniemasserant-Desktop-iPad-section js  gradient rgba opacity textshadow multiplebgs boxshadow borderimage borderradius cssreflections csstransforms csstransitions fontface domloaded w-1200 lt-1280 lt-1440 lt-1680 lt-1920"><head>
+<title>index</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content=" user-scalable=no" />
+<link rel="stylesheet" href="css/style.css" type="text/css">
+ <link rel="stylesheet" type="text/css" href="css/drag.css">
+ <script type="text/javascript" src="js/head.min.js"></script>
+ <script type="text/javascript" src="customFunctions.js"></script>
+ <script type="text/javascript" src="js/analytic.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="wraper">
+		<div class="message">
+		    <div class="mesage-area">Please turn your device to view ad</div><!--close message-area-->
+		    <img src="//publish.responsiveads.com/clients/WSJ/images/reload_icon.png" />
+			
+			<div class="message-container">
+<div class="obtainNew"><a onclick='external(this.href); return false; obtainProspectus()' href="https://advisors.vanguard.com/VGApp/iip/site/advisor/literatureforms/productfilresults?fwdcat=Prospectuses"  >Obtain Prospectus</a></div>
+			    <div class="message-container-img">
+				    <img src="//publish.responsiveads.com/clients/WSJ/images/footer-left.png">
+				</div><!--close message-container-img container here-->
+			</div><!--close message container here-->
+			
+		</div><!--message close here-->
+
+	    <section>
+	      <div class="main">
+		        <div class="top"><p>Drag a piece into the circle to get tailored ETF results.</p></div><!--top close here-->
+				<div class="drag_drop" id="drag_drop_div">
+				    <div class="drag_drop_area">
+						<div class="left-image">
+						    <img id="touchme1" class="touchBox ui-draggable" src="images/bond.png"><br>
+							<span>BOND</span>
+						</div><!--left-image close here-->
+
+						<div class="middle-image ui-droppable" id="drop"><img src="http://publish.responsiveads.com/clients/WSJ/images/opening.gif" style="width: 230px;"></div><!--middle-image close here-->
+						<div class="right-image">
+						    <img id="touchme2" class="touchBox ui-draggable" src="images/stock.png"><br>
+							<span>STOCK</span>
+						</div><!--right-image close here-->
+
+						<div class="left-third-image">
+							<img id="touchme3" class="touchBox ui-draggable" src="images/bond.png"><br>
+							<span>THIRD IMAGE</span>
+
+						</div><!--left-third-image close here-->
+
+					</div><!--drag_drop_area close here-->
+				</div><!--drag_drop close here-->
+
+				<div class="successDiv">
+					<div class="success-img"><img src="//publish.responsiveads.com/clients/WSJ/images/05_Bond_Domestic_Government_Long.gif"></div>
+					<div class="success-text"><h2>Nice job.<br>Find out more about <br> these ETFs.</h2></div>
+				</div>
+
+				<div class="function">
+				    <ul>
+					    <li><a href="index.html"><img src="http://publish.responsiveads.com/clients/WSJ/images/home-icon.png"></a></li>
+						<li class="breadCrumb">LOW-COST</li>
+					</ul>
+				</div><!--function close here-->
+   </div>
+<div id="footerLeft"></div>
+<div id="obtain"><a  onclick='external(this.href); return false; obtainProspectus()' href="https://advisors.vanguard.com/VGApp/iip/site/advisor/literatureforms/productfilresults?fwdcat=Prospectuses"  >Obtain Prospectus</a></div>
+ <div style="clear:both"></div>
+
+		</section>
+
+		<aside class="nonbounce" style="z-index:99999;">
+		       <div class="top-aside">
+			       <a class="previous_step" href=""></a><!--previous close here-->
+				   <div class="results"><a href="#"><b>56</b> ETF RESULTS</a></div><!--results close here-->
+				   <p>TAP ANY ETF FOR MORE DETAILS</p>
+			   </div><!--top-aside close here-->
+
+			   <div class="details nonbounce">
+
+			   </div><!--details close here-->
+
+         <div style="clear:both"></div>
+
+		</aside>
+
+			   <div id="footerRight">Looking for full list of ETFs?<br><a style="color:#000;text-decoration:underline" onclick='external(this.href); return false; viewAll()'  href="https://personal.vanguard.com/us/funds/etf/all">View them here</a></div>
+			    <div style="clear:both"></div>
+	</div><!--wraper close here-->
+</div><!--container close here-->
+
+<script>
+
+
+head.js("//media.admob.com/api/v1/google_mobile_app_ads.js","https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js","js/ui.js","js/touch.js", "js/nonbounce.js", function (){
+
+$.nonbounce();
+update_etf_results(datafields.All);
+window.breadCrumbValues = "homePage";
+
+$("#touchme1, #touchme2, #touchme3").draggable({revert:true});
+$("#drop").droppable({
+    drop: function( event, ui ) {
+    	$(ui.draggable).hide();
+    	$(this).children("img").fadeOut(500,function(){
+    		getImages(window.imageName);
+			window.breadCrumbValues += '/' + window.imageName;
+    		$(".drag_drop_area img").css("opacity","1");
+    		$("#drop img").fadeIn(500);
+    		 $(ui.draggable).show();
+    	});
+    },
+    over: function(event, ui) {
+	    $('.touchBox.ui-draggable-dragging').animate({width:'80px', height:'80px'});
+    	$(".ui-draggable-dragging, #drop img").css("opacity","0.3");
+
+     	//RAD.analytics({e:"add",elId:"{"+window.imageName+"}"});
+		// RAD.analytics({e:"circlestate",v:{0: "{"+window.imageName+"}", 1: "{"+window.imageName+"}"...}});
+    },
+    out: function (event, ui){
+    	$(".ui-draggable-dragging, #drop img").css("opacity","1");
+	    $('.touchBox').animate({width:'100px', height:'100px'});
+
+    }
+});
+
+
+$(".previous_step").bind("click touchstart", function(){
+	if($(".left-third-image").css("display") == 'block')
+	{
+		$(".left-image").css("margin-top","184px");
+	}
+
+	breadCrumb = window.breadCrumbValues.split('/');
+	breadCrumbLength = breadCrumb.length;
+
+	var prevSelected = breadCrumb[breadCrumbLength - 1];
+
+	RAD.analytics({e:"click",elId:"previous", v:"{"+prevSelected+"}"});
+
+
+	if (breadCrumbLength >= 2) {
+	//	$(".left-image").css('margin-top', '150px');
+		if ($(".successDiv").css('display') == 'block') {
+			$(".drag_drop").show();
+			$(".successDiv").hide();
+		}
+
+		window.breadCrumbValues = 'homePage';
+		if (breadCrumbLength >= 3) for (i = 1; i <= breadCrumbLength - 2; i++) window.breadCrumbValues += '/' + breadCrumb[i];
+		getImages(breadCrumb[breadCrumbLength - 2]);
+
+
+	}
+	return false;
+});
+
+
+$(".function ul li.home").bind("click touchstart", function(){
+	$(".left-image").css('margin-top', '180px');
+	window.breadCrumbValues = 'homePage\/home';
+	$('.previous_step').click();
+});
+
+});
+</script>
+</body></html>

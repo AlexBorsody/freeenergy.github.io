@@ -1,0 +1,1056 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Disney Video</title>
+  <script src="//a.dilcdn.com/a/head-bc9c5e48b779.js" type="text/javascript"></script>
+<style>
+.disneyVideo.poster .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.poster {
+    cursor: pointer;
+}
+
+.badgeImage {
+    width: 224px;
+    height: 92px;
+}
+
+.badgeImage .badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 20%;
+}
+
+.adClickTarget {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+div .player-container {
+    width: 100%;
+    height: 100%;
+}
+
+.disneyVideo video {
+    width: 100% !important;
+    height: 100% !important;
+    visibility: visible !important;
+    background-color: #000;
+}
+
+.disneyVideo .details {
+    position: absolute;
+    bottom: 6px;
+    left: 8px;
+    z-index: 99;
+}
+
+.disneyVideo .details h3 {
+    color: #fff;
+    font-weight: 600;
+    margin: 0;
+    padding: 0 0 10px;
+}
+
+.disneyVideo .posterImage {
+    width: 100%;
+}
+
+.disneyVideo .player_error {
+    box-shadow: 0 1px 6px rgba(0,0,0,0.5);
+    background-color: #333333;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #333), color-stop(100%, #111));
+    background-image: -webkit-linear-gradient(#333, #111);
+    background-image: linear-gradient(#333, #111);
+    border-radius: 3px;
+    color: #fff;
+    font-size: 1em;
+    line-height: 1.25em;
+    border: 1px solid #000;
+    border-top: 1px solid #555;
+    height: 50%;
+    margin: 10%;
+    text-align: center;
+    padding: 16px 24px 24px;
+}
+
+.disneyVideo .player_error a {
+    color: #1786eb;
+    text-decoration: none;
+    transition: color 125ms ease 0s;
+}
+
+.disneyVideo .hide {
+    -webkit-transform: translateX(-2048px);
+}
+
+.disneyVideo .captionator-cue-canvas {
+    pointer-events: none;
+}
+
+.disneyVideo div.playButton {
+    width: 100%;
+    height: 100%;
+    background: url(//a.dilcdn.com/a/play_button_off_272px-e1f1c067f73f.png) 5% center no-repeat;
+    background-size: 20%;
+}
+
+.disneyVideo div.playButton:hover {
+    width: 100%;
+    height: 100%;
+    background: url(//a.dilcdn.com/a/play_button_on_272px-0dfa58ec304a.png) 5% center no-repeat;
+    background-size: 20%;
+}
+
+.disneyVideo .captionator-cue-canvas {
+    pointer-events: none;
+}
+
+.disneyVideo div.ccButton.off {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url(//a.dilcdn.com/a/video/ccButtonOff-7de10a0ae194.png) 95% center no-repeat;
+    background-size: 100%;
+    opacity: 0.5;
+    top: 45%;
+    right: 5%;
+}
+
+.disneyVideo div.ccButton.off:hover {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url(//a.dilcdn.com/a/video/ccButtonOff-7de10a0ae194.png) 95% center no-repeat;
+    background-size: 100%;
+    opacity: 1;
+    top: 45%;
+    right: 5%;
+}
+
+.disneyVideo div.ccButton.on {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url(//a.dilcdn.com/a/video/ccButtonOn-13b28b8d8e18.png) 95% center no-repeat;
+    background-size: 100%;
+    opacity: 0.5;
+    top: 45%;
+    right: 5%;
+}
+
+.disneyVideo div.ccButton.on:hover {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url(//a.dilcdn.com/a/video/ccButtonOn-13b28b8d8e18.png) 95% center no-repeat;
+    background-size: 100%;
+    opacity: 1;
+    top: 45%;
+    right: 5%;
+}
+
+.disneyVideo .overlay {
+    position: absolute;
+    width: 100%;
+    height: 92%;
+}
+
+.disneyVideo div.adCountdown {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px;
+    overflow: hidden;
+    background: #000;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.disneyVideo .adCountdown h3 {
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+
+.disneyVideo .duration {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    overflow: hidden;
+    padding: 5px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 100;
+}
+
+.disneyVideo .duration p {
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (min-width: 680px) {
+    .disneyVideo div.adCountdown {
+        top: 64px;
+        left: 64px;
+        padding: 10px;
+    }
+
+    .disneyVideo .player_error {
+        font-size: 1.275em;
+    }
+
+    .badgeImage .badge {
+        width: 18%;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .disneyVideo div.adCountdown {
+        top: 64px;
+        left: 64px;
+        padding: 10px;
+    }
+
+    .disneyVideo .player_error {
+        font-size: 1.275em;
+    }
+}
+
+#video_wrapper .scaler {
+    padding-top: 56.25%;
+}
+
+#embed_wrapper {
+    width: 100%;
+    margin: 0 auto;
+    background: #fff;
+}
+
+#embed_wrapper .scaler {
+    padding-top: 56.25%;
+}
+
+#frame,.player,.card {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+#frame .orphan,.player .orphan,.card .orphan {
+    box-shadow: 0 1px 6px rgba(0,0,0,0.5);
+    background-color: #333333;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #333), color-stop(100%, #111));
+    background-image: -webkit-linear-gradient(#333, #111);
+    background-image: linear-gradient(#333, #111);
+    border-radius: 3px;
+    color: #fff;
+    font-size: 0.875em;
+    font-weight: 800;
+    line-height: 1.25em;
+    border: 1px solid #fff;
+    border-top: 1px solid #555;
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 13%;
+    padding: 24px 24px 24px;
+}
+
+.player .player_error {
+    box-shadow: 0 1px 6px rgba(0,0,0,0.5);
+    background-color: #333333;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #333), color-stop(100%, #111));
+    background-image: -webkit-linear-gradient(#333, #111);
+    background-image: linear-gradient(#333, #111);
+    border-radius: 3px;
+    color: #fff;
+    font-size: 1em;
+    line-height: 1.25em;
+    border: 1px solid #fff;
+    border-top: 1px solid #555;
+    height: 50%;
+    margin: 10%;
+    text-align: center;
+    padding: 16px 24px 24px;
+}
+
+.player .player_error a {
+    color: #1786eb;
+    text-decoration: none;
+    transition: color 125ms ease 0s;
+}
+
+.card {
+    background-color: #1c1e1f;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1c1e1f), color-stop(100%, #404548));
+    background-image: -webkit-linear-gradient(#1c1e1f, #404548);
+    background-image: linear-gradient(#1c1e1f, #404548);
+    background: #2b3134;
+    -webkit-transition: -webkit-transform 250ms ease-in, visibility 0ms 250ms;
+    -moz-transition: -moz-transform 250ms ease-in, visibility 0ms 250ms;
+    -ms-transition: -ms-transform 250ms ease-in, visibility 0ms 250ms;
+    -o-transition: -o-transform 250ms ease-in, visibility 0ms 250ms;
+    transition: transform 250ms ease-in, visibility 0ms 250ms;
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    transform: translateY(100%);
+    -webkit-transform: translate3d(0, 100%, 0);
+    -moz-transform: translate3d(0, 100%, 0);
+    -ms-transform: translate3d(0, 100%, 0);
+    -o-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: hidden;
+    display: none;
+}
+
+html.no-media-query .card {
+    visibility: visible;
+}
+
+html.no-media-query .card.visible {
+    display: block;
+}
+
+.card.visible {
+    -webkit-transition: -webkit-transform 250ms cubic-bezier(0.175, 0.885, 0.32, 1),visibility 0ms;
+    -webkit-transition: -webkit-transform 250ms cubic-bezier(0.175, 0.885, 0.32, 1.15),visibility 0ms;
+    -moz-transition: -moz-transform 250ms cubic-bezier(0.175, 0.885, 0.32, 1.15),visibility 0ms;
+    -ms-transition: -ms-transform 250ms cubic-bezier(0.175, 0.885, 0.32, 1.15),visibility 0ms;
+    -o-transition: -o-transform 250ms cubic-bezier(0.175, 0.885, 0.32, 1.15),visibility 0ms;
+    transition: transform 250ms cubic-bezier(0.175, 0.885, 0.32, 1.15),visibility 0ms;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+}
+
+.card .suggested ul {
+    padding: 44px 48px 0;
+}
+
+.card .suggested ul li {
+    display: inline-block;
+    vertical-align: baseline;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 33%;
+    padding: 12px;
+    float: left;
+}
+
+.card .suggested ul li .thumb-box h4 {
+    display: none;
+}
+
+.card .suggested ul li .duplicate-title {
+    display: none;
+}
+
+.card .suggested ul li.priority .thumb-box:before {
+    content: "";
+    display: block;
+    width: 78px;
+    height: 78px;
+    margin-top: 0;
+    right: -4px;
+    z-index: 9999;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 78px 78px;
+    background-position: right;
+    background-image: url(//a.dilcdn.com/a/banner_next-fe01497cb2d7.png);
+}
+
+.card .card_header {
+    display: block;
+    height: 140px;
+    color: #fff;
+    width: auto;
+    background-color: #23292b;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    box-shadow: inset 0 2px 20px rgba(0,0,0,0.5),0 1px 0 rgba(255,255,255,0.1);
+}
+
+.card .card_header .countdown_intro {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 1em;
+    vertical-align: baseline;
+    line-height: normal;
+}
+
+.card .card_header .countdown_intro .countdown {
+    display: block;
+    clear: both;
+    font-size: 3.75em;
+    font-weight: 600;
+    text-align: center;
+    vertical-align: baseline;
+}
+
+.card .card_header .countdown_intro .autoplay {
+    cursor: pointer;
+    font-size: 0.750em;
+    background-color: #485053;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.card .card_header .countdown_intro .autoplay:hover {
+    background-color: #50595c;
+}
+
+.card .card_header .btn_replay,.card .card_header .btn_next {
+    cursor: pointer;
+    color: #fff;
+    font-size: 1em;
+    text-align: center;
+    line-height: 44px;
+    font-weight: 400;
+    border: 1px solid #1b2022;
+    width: 200px;
+    height: 44px;
+    margin: 0 auto;
+    top: 44px;
+    border-radius: 2px;
+    display: inline-block;
+    vertical-align: baseline;
+    -webkit-transition: -webkit-transform 25ms, -webkit-box-shadow 25ms;
+    -moz-transition: -moz-transform 25ms,    -moz-box-shadow 25ms;
+    -ms-transition: -ms-transform 25ms,     -ms-box-shadow 25ms;
+    -o-transition: -o-transform 25ms,      -o-box-shadow 25ms;
+    transition: transform 25ms,         box-shadow 25ms;
+}
+
+.card .card_header .btn_replay {
+    position: absolute;
+    left: 60px;
+}
+
+.card .card_header .btn_replay:before {
+    content: "";
+    display: block;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 11px;
+    left: 8px;
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-position: right;
+    background-image: url(//a.dilcdn.com/a/replay_btn-333357b89907.png);
+}
+
+.card .card_header .btn_next {
+    position: absolute;
+    right: 60px;
+}
+
+.card.embed .suggested {
+    height: 100%;
+}
+
+.card.embed .suggested ul {
+    height: 100%;
+    padding: 44px 70px 0;
+}
+
+.card.embed .suggested ul li {
+    padding: 6px;
+    width: 50%;
+}
+
+.card.embed h3.overlay-title {
+    font-size: 0.75em;
+    width: 80%;
+}
+
+.card.embed time {
+    font-size: 0.75em;
+    color: rgba(255,255,255,0.6);
+}
+
+.card.embed .card_header {
+    height: 48px;
+    background-color: #1b2022;
+}
+
+.card.embed .card_header .btn_replay {
+    width: 130px;
+}
+
+.card.embed .card_header .btn_watch {
+    cursor: pointer;
+    color: #fff;
+    font-size: 0.9em;
+    text-align: left;
+    line-height: 44px;
+    font-weight: 400;
+    border: 1px solid #1b2022;
+    width: 150px;
+    height: 41px;
+    margin: 0 auto;
+    top: 44px;
+    padding-top: 3px;
+    border-radius: 2px;
+    display: inline-block;
+    vertical-align: baseline;
+    -webkit-transition: -webkit-transform 25ms, -webkit-box-shadow 25ms;
+    -moz-transition: -moz-transform 25ms,    -moz-box-shadow 25ms;
+    -ms-transition: -ms-transform 25ms,     -ms-box-shadow 25ms;
+    -o-transition: -o-transform 25ms,      -o-box-shadow 25ms;
+    transition: transform 25ms,         box-shadow 25ms;
+}
+
+.card.embed .card_header .btn_replay {
+    position: static;
+    left: 0;
+}
+
+.card.embed .card_header .btn_replay:before {
+    background-size: 80%;
+}
+
+.card.embed .card_header .btn_watch {
+    float: right;
+}
+
+.card.embed .card_header .btn_watch:after {
+    content: "";
+    display: inline-block;
+    width: 85px;
+    height: 33px;
+    position: absolute;
+    top: 8px;
+    background-repeat: no-repeat;
+    background-size: 68px auto;
+    background-position: right;
+    background-image: url(//a.dilcdn.com/a/nav_logo-d2c2cf757f1e.png);
+}
+
+.card.watch .card_header {
+    background-color: #485053;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #485053), color-stop(100%, #2b3033));
+    background-image: -webkit-linear-gradient(#485053, #2b3033);
+    background-image: linear-gradient(#485053, #2b3033);
+}
+
+.card.watch .card_header .btn_replay,.card.watch .card_header .btn_next {
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+    background-color: #1b2022;
+}
+
+.card.watch .card_header .btn_replay {
+    background-image: -webkit-linear-gradient(#485053, #2b3033);
+    background-image: linear-gradient(#485053, #2b3033);
+}
+
+.card.watch .card_header .btn_replay:hover {
+    background-image: -webkit-linear-gradient(#535c5f, #3d4448);
+    background-image: linear-gradient(#535c5f, #3d4448);
+}
+
+.card.watch .card_header .btn_replay:active {
+    background-image: -webkit-linear-gradient(#485053, #2b3033);
+    background-image: linear-gradient(#485053, #2b3033);
+    box-shadow: inset 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card.watch .card_header .btn_next {
+    background-image: -webkit-linear-gradient(#398ff2, #2975c2);
+    background-image: linear-gradient(#398ff2, #2975c2);
+}
+
+.card.watch .card_header .btn_next:hover {
+    background-image: -webkit-linear-gradient(#5dabff, #3189e3);
+    background-image: linear-gradient(#5dabff, #3189e3);
+}
+
+.card.watch .card_header .btn_next:active {
+    background-image: -webkit-linear-gradient(#398ff2, #2975c2);
+    background-image: linear-gradient(#398ff2, #2975c2);
+    box-shadow: inset 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#purchase {
+    padding-bottom: 8px;
+}
+
+@media screen and (min-width: 680px) {
+    .player .player_error {
+        font-size: 1.275em;
+    }
+
+    #frame .orphan {
+        font-size: 1.275em;
+        margin-top: 23%;
+    }
+
+    .card {
+        display: block;
+    }
+
+    .card.embed .card_header .btn_watch:after {
+        right: 18px;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .player .player_error {
+        font-size: 1.275em;
+    }
+
+    #frame .orphan {
+        font-size: 1.275em;
+        margin-top: 25%;
+    }
+
+    .card .suggested ul {
+        padding: 44px 60px 0;
+    }
+
+    .card .card_header {
+        height: 140px;
+        border-bottom: 1px solid rgba(0,0,0,0.6);
+        box-shadow: inset 0 2px 20px rgba(0,0,0,0),0 1px 0 rgba(255,255,255,0.1);
+    }
+
+    .card .card_header .btn_replay,.card .card_header .btn_next {
+        cursor: pointer;
+        color: #fff;
+        font-size: 1em;
+        text-align: center;
+        line-height: 44px;
+        font-weight: 400;
+        border: 1px solid #1b2022;
+        width: 200px;
+        height: 44px;
+        margin: 0 auto;
+        top: 44px;
+    }
+
+    .card .card_header .btn_replay {
+        left: 60px;
+    }
+
+    .card .card_header .btn_next {
+        right: 60px;
+    }
+
+    .card.embed h3.overlay-title {
+        font-size: 0.75em;
+        width: 80%;
+    }
+
+    .card.embed time {
+        font-size: 0.75em;
+        color: rgba(255,255,255,0.6);
+    }
+
+    .card.embed .card_header {
+        height: 45px;
+    }
+
+    .card.embed .card_header .btn_replay {
+        width: 130px;
+        height: 44px;
+    }
+
+    .card.embed .card_header .btn_watch {
+        cursor: pointer;
+        color: #fff;
+        font-size: 0.9em;
+        text-align: left;
+        line-height: 44px;
+        font-weight: 400;
+        border: 1px solid #1b2022;
+        width: 150px;
+        height: 41px;
+        margin: 0 auto;
+        top: 44px;
+        padding-top: 3px;
+    }
+
+    .card.embed .card_header .btn_replay {
+        float: left;
+        text-align: left;
+        padding-left: 40px;
+    }
+
+    .card.embed .card_header .btn_watch {
+        padding-right: 90px;
+        text-align: right;
+        float: right;
+    }
+
+    .card.watch .card_header .btn_replay,.card.watch .card_header .btn_next {
+        background-color: #1b2022;
+    }
+}
+
+.watch_2 #toolbar #metadata div.contentarea {
+    padding: 0;
+}
+
+.watch_2 #video_watch_container {
+    *zoom: 1;
+}
+
+.watch_2 #video_watch_container:before,.watch_2 #video_watch_container:after {
+    content: " ";
+    display: table;
+}
+
+.watch_2 #video_watch_container:after {
+    clear: both;
+}
+
+.watch_2 .suggested ul {
+    padding: 5px 48px 0;
+}
+
+.watch_2 .messageLink {
+    padding: 1em;
+    background-color: #eff6fe;
+    border-radius: 4px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.watch_2 .messageLink .watch-icon {
+    width: 32px;
+    height: 100%;
+    display: inline-block;
+    margin-right: 0.2em;
+    vertical-align: top;
+}
+
+.watch_2 .messageLink .watch-icon img {
+    width: 100%;
+}
+
+.watch_2 .messageLink .copy {
+    width: 80%;
+    vertical-align: top;
+    position: relative;
+    padding-top: 0;
+    text-align: left;
+    display: inline-block;
+}
+
+.watch_2 .messageLink .noImage {
+    width: 100%;
+}
+
+.watch_2 .messageLink p {
+    padding: 0;
+    color: #8c8d8f;
+    font-size: 0.875em;
+    line-height: 1.3em;
+}
+
+.watch_2 #video_wrapper {
+    position: relative;
+    width: 100%;
+    float: none;
+    display: block;
+    background: #fff;
+}
+
+.watch_2 #video_wrapper .bound {
+    padding: 0;
+}
+
+.watch_2 #video_wrapper .scaler {
+    padding-top: 56.25%;
+}
+
+.watch_2 .content-toolbar-container {
+    width: 100%;
+    float: none;
+    display: block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 17px 17px 0;
+    background-color: #f4f4f4;
+}
+
+.watch_2 .content-toolbar-container #metadata {
+    padding: 0;
+}
+
+.watch_2 .meta-content {
+    position: relative;
+}
+
+.watch_2 .secondary-content {
+    width: 100%;
+    background-color: #f4f4f4;
+}
+
+.watch_2 .secondary-content .productlink {
+    *zoom: 1;
+    margin-bottom: 0;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.watch_2 .secondary-content .productlink:before,.watch_2 .secondary-content .productlink:after {
+    content: " ";
+    display: table;
+}
+
+.watch_2 .secondary-content .productlink:after {
+    clear: both;
+}
+
+.watch_2 .secondary-content .productlink .icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+}
+
+.watch_2 .secondary-content .productlink .icon img {
+    width: 100%;
+}
+
+.watch_2 .secondary-content .productlink .icon_title {
+    font-size: 0.85em;
+    display: inline-block;
+    height: 100%;
+    padding-top: 10px;
+}
+
+.watch_2 .secondary-content .productlink span.watch_icon {
+    width: 24%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.watch_2 .secondary-content .productlink span.watch_icon img {
+    width: 100%;
+}
+
+.watch_2 .secondary-content .productlink {
+    padding-bottom: 10px;
+}
+
+.watch_2 .secondary-content .social-links-wrapper {
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+
+@media screen and (min-width: 680px) {
+    .watch_2 .suggested ul {
+        padding-top: 12px;
+    }
+
+    .watch_2 .messageLink .watch-icon {
+        width: 32px;
+        height: 100%;
+        display: inline-block;
+        margin-right: 0.2em;
+        vertical-align: top;
+    }
+
+    .watch_2 .messageLink .watch-icon img {
+        width: 100%;
+    }
+
+    .watch_2 .messageLink .copy {
+        width: auto;
+        padding-top: 9px;
+        text-align: inherit;
+    }
+
+    .watch_2 .messageLink .noImage {
+        width: 100%;
+    }
+
+    .watch_2 .messageLink .secondary-content .productlink {
+        border: none;
+        padding-bottom: 0;
+    }
+
+    .watch_2 .messageLink .secondary-content .productlink span.watch_icon {
+        width: 28%;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+
+    .watch_2 .messageLink .secondary-content .promo-social-wrapper {
+        *zoom: 1;
+    }
+
+    .watch_2 .messageLink .secondary-content .promo-social-wrapper:before,.watch_2 .messageLink .secondary-content .promo-social-wrapper:after {
+        content: " ";
+        display: table;
+    }
+
+    .watch_2 .messageLink .secondary-content .promo-social-wrapper:after {
+        clear: both;
+    }
+
+    .watch_2 .messageLink .secondary-content .social-links-wrapper {
+        padding-bottom: 10px;
+    }
+
+    .watch_2 .messageLink .contentarea {
+        position: relative;
+    }
+
+    .watch_2 .messageLink .contentarea .content {
+        width: 50%;
+    }
+
+    .watch_2 .messageLink .meta-content {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .watch_2 .suggested ul {
+        padding: 0 48px 0;
+    }
+
+    .watch_2 #video_wrapper {
+        width: 66.40625%;
+        float: left;
+        display: inline;
+    }
+
+    .watch_2 .content-toolbar-container {
+        width: 33.59375%;
+        float: right;
+        display: inline;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .watch_2 .meta-content {
+        position: inherit;
+    }
+
+    .watch_2 .module_body {
+        height: 366px;
+    }
+
+    .watch_2 #social-links {
+        margin-bottom: 5px;
+    }
+
+    .watch_2 #metadata .contentarea .content {
+        width: 100%;
+        padding-right: 0;
+        border: none;
+    }
+
+    .watch_2 .secondary-content {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        min-height: 204px;
+    }
+
+    .watch_2 .secondary-content .promo-social-wrapper {
+        display: table;
+        width: 100%;
+        vertical-align: bottom;
+    }
+
+    .watch_2 .secondary-content .productlink {
+        width: 100%;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .watch_2 .secondary-content .productlink span.watch_icon {
+        width: 31%;
+        margin-bottom: 0;
+    }
+}
+
+@font-face {
+    font-family:'Matterhorn';src:url("//a.dilcdn.com/a/m6-caf8ae6bcf01.eot#") format("eot"),url("//a.dilcdn.com/a/m6-a466dc47063a.woff") format("woff"),url("//a.dilcdn.com/a/m6-3f299ce3c1cc.ttf") format("truetype"),url("//a.dilcdn.com/a/m6-1a36b49488dc.svg#Matterhorn") format("svg");font-weight:600;font-style:normal;
+}
+
+body,h1,h2,h3,h4,h5,h6,input,textarea,select {
+    font-size: 1em;
+    font-family: Matterhorn, Helvetica, Arial, sans-serif;
+    color: #fff;
+}
+
+body {
+    background: #fff;
+}
+
+h1 {
+    font-size: 1.5em;
+    text-align: center;
+    padding: 12px;
+}
+
+.poster:after {
+    background-color: transparent;
+    background-image: -moz-linear-gradient(center top, transparent 0%, #000);
+    bottom: 0;
+    box-shadow: 0 1px 0 black;
+    content: "";
+    display: block;
+    height: 40%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: 2;
+}
+
+.goc-el {
+    display: none;
+}
+</style>
+<link rel="canonical" href="http://video.disney.com/watch/meetbaymax-big-hero-6-4fddb752c4b56ad926b945c1">
+</head>
+<body>
+  <!-- Responsiveads.com - eb7cc27ab204db44c76c474ee91d9d5a -->
+<ins id="responsivead-eb7cc27ab204db44c76c474ee91d9d5a"></ins>
+<script>
+var Radical=Radical||[];
+Radical.push(['eb7cc27ab204db44c76c474ee91d9d5a',{clickthrough:'%%CLICK_URL_UNESC%%',flowline:'535a1fa7a1ef92731c0000a7',sizes:["641x470","834x470","1440x470","3000x470","567x470","318x470","371x470"],fallbacks:true,fallbackOptions:{ minIE: 10 }, overridePlacement:null }]);
+(function(d,r){if(r.state>0){return}r.state=1;var s=d.createElement('script');
+s.src='http://publish.responsiveads.com/libs/radical.r2.min.js';d.getElementsByTagName('head')[0].appendChild(s);}(document,Radical));
+</script></body>
+</html>

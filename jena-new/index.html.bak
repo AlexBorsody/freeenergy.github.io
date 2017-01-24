@@ -1,0 +1,775 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>Widget</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+     
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" media="screen" href="css/nivo-slider.css" />
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+        <script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
+	    <script type="text/javascript" src="jqmobile/jquery.mobile-1.0.1.min.js"></script>
+
+	<script type="text/javascript">
+$(window).load(function() {
+	$('#slider').nivoSlider({
+		effect:'fade', //Specify sets like: 'fold,fade,sliceDown'
+		height: 242,
+		width: 446,
+		marginbottom: 0,
+		slices:15,
+		animSpeed:200, //Slide transition speed
+		pauseTime:3500,
+		startSlide:0, //Set starting Slide (0 index)
+		directionNav:false, //Next & Prev
+		directionNavHide:true, //Only show on hover
+		controlNav:true, //1,2,3...
+		controlNavThumbs:false, //Use thumbnails for Control Nav
+		controlNavThumbsFromRel:false, //Use image rel for thumbs
+		controlNavThumbsSearch: '.jpg', //Replace this with...
+		controlNavThumbsReplace: '_thumb.jpg', //...this in thumb Image src
+		keyboardNav:true, //Use left & right arrows
+		pauseOnHover:true, //Stop animation while hovering
+		manualAdvance:false, //Force manual transitions
+		caption:false,
+		beforeChange: function(){},
+		afterChange: function(){},
+		slideshowEnd: function(){} //Triggers after all slides have been shown
+	});
+	/*
+	$(".datedenim:first div").hover(function () {
+	  $("div[class^='tated']").stop(true, true);
+	  $(".tated1").toggle(500);
+	});
+	$(".leather:first div").hover(function () {
+	  $("div[class^='tated']").stop(true, true);
+	  $(".tated2").toggle(500);
+	});
+	$(".ontime:first div").hover(function () {
+	  $("div[class^='tated']").stop(true, true);
+	  $(".tated3").toggle(500);
+	});
+	$(".tights:first div").hover(function () {
+	  $("div[class^='tated']").stop(true, true);
+	  $(".tated4").toggle(500);
+	});
+	$(".tall:first div").hover(function () {
+	  $("div[class^='tated']").stop(true, true);
+	  $(".tated5").toggle(500);
+	});
+	   
+	
+	$(".pocket:first div").hover(function () {
+	  $("div[class^='tated']").stop(true, true);
+	  $(".tated6").toggle(500);
+	});
+	$(".boots:first div").hover(function () {
+	  $("div[class^='tated']").stop(true, true);
+	  $(".tated7").toggle(500);
+	});
+	$(".perfect:first div").hover(function () {
+	  $("div[class^='tated']").stop(true, true);
+	  $(".tated8").toggle(500);
+	});
+	$(".kneehighs:first div").hover(function () {
+	  $("div[class^='tated']").stop(true, true);
+	  $(".tated9").toggle(500);
+	});
+	
+	
+	$(".theperfecttee:first div").hover(function () {
+	  $("div[class^='tated']").stop(true, true);
+	  $(".tated10").toggle(500);
+	});
+	$(".bracelet:first div").hover(function () {
+	  $("div[class^='tated']").stop(true, true);
+	  $(".tated11").toggle(500);
+	});
+	$(".cardigan:first div").hover(function () {
+	  $("div[class^='tated']").stop(true, true);
+	  $(".tated12").toggle(500);
+	});
+	$(".favoritedenim:first div").hover(function () {
+	  $("div[class^='tated']").stop(true, true);
+	  $(".tated13").toggle(500);
+	});
+	$(".blackflats:first div").hover(function () {
+	  $("div[class^='tated']").stop(true, true);
+	  $(".tated14").toggle(500);
+	});
+	*/
+	     
+
+});
+
+
+
+</script>
+
+
+<script type="text/javascript"> 
+	
+	if ((navigator.userAgent.indexOf('iPhone') != -1) || (navigator.userAgent.indexOf('iPod') != -1) || (navigator.userAgent.indexOf('iPad') != -1)) {
+		document.ontouchmove = function(e) {
+        e.preventDefault();
+    };
+	
+	} 
+	
+
+</script>
+
+
+	
+    </head>
+    <body>
+       
+       <div class="inner-container"> 
+	<div id="fb-root"></div>
+<div id="fb-root"></div>
+<!--<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>-->
+
+	
+      <header>
+		<div class="wrapper">
+		    <div id="logo">
+			<div class="logimg">
+			<a href="./"><img src="img/logo.png"></a>
+			</div>
+			
+		   <div class="nav">
+		           <div class="switcher">
+		    		<ul class="pxs_nav">
+					<li data-index="0" class="active" style="font-weight: bold;"><a href="#">About</a></li>
+					<li data-index="1"><a href="#">autumn carries gold in its pocket  </a></li>
+					<li data-index="2"><a href="#">you can move mountains</a></li>
+					<li data-index="3"><a href="#">calm, cool and collegiate</a></li>
+				</ul>
+			   </div>		
+		    </div>	
+			
+                   </div>
+
+		</div>
+      </header>
+		<div id="pxs_container" class="pxs_container">
+			<div class="pxs_bg">
+				<div class="pxs_bg1"></div>
+				<div class="pxs_bg2"></div>
+				<div class="pxs_bg3"></div>
+				<div class="pxs_bg4"></div>
+			</div>
+			<div class="pxs_loading">Loading images...</div>
+			<div class="pxs_slider_wrapper">
+				<div class="inner-wrapper">
+				<ul class="pxs_slider">
+					<li class="first">
+					    <div class="bbox">
+					     
+					    <div id="container">
+						<div id="slider">
+						    <img src="img/slider/slide1.png" alt=""/>
+						    <img src="img/slider/slide2.png" alt=""/>
+						    <img src="img/slider/slide3.png" alt=""/>
+							<img src="img/slider/slide4.png" alt=""/>
+							<img src="img/slider/slide5.png" alt=""/>
+						 </div>
+                         </div>
+                          <div class="f"><img src="img/adam.png" alt="First Image" /></div>
+					    </div>
+					   
+   
+					</li>
+					<li>
+					    <div class="dtext"> 
+					    <div class="descript">Autumn carries gold in its pockets</div>
+					    <div class="descriptsmall"><p>This outfit was inspired by the colors of autumn! It's my favorite season because the weather is cold enough to start wearing light outerwear such as this burnt orange blazer. Balancing both formal and casual, this outfit can be worn to an array of different events whether it be a luncheon, matinee performance, or simply a stroll in the park. Never be to hesitant to fully engage in the rich hues for fall.</p></div>
+		              	            <span class="shopbutton"><a href="#" title="Shop this look">shop</a></span>
+					     <div class="hh">
+					     	
+					     	
+					     	<div class="left_text" >
+					     	
+					     	
+						<div class="datedenim"><div class="font">elston blazer</div>
+						    <p>cut from the same cloth as our elston chino. Finished with all the trimmings like interior menswear seam taping and functional cuff buttons. a low- maintenance, old-school look cut a modern fit.  <span>$150</span></p>
+							<div class="tated1" style="background-image:url(./img/circle.jpg)"></div>
+							<div class="tated21"></div>
+						</div>
+						<div class="leather">
+						<div class="font">allen edmonds mctavish wingtip shoes</div>
+						    <p>a handcrafted balmoral brouge from our friend (and fellow wisconsinites) at Allen Edmonds. detailed with an eye- catching toe medallion as well a brogueing on the wing, throat and backstay to make it dressy enough for business, but casual by design. Crafted from waxy distressed leather and a single split reverse leather sole that truly sets them apart and make them an instant classic.<span>$295</span></p>
+							<div class="tated2" style="background-image:url(./img/circle.jpg)"></div>
+							<div class="tated22"></div>
+						</div>
+						</div>
+						<div class="center_image">
+						<img src="img/applepicking.png" alt="Second Image" />	
+						</div>
+						<div class="right_text">	
+						<div class="ontime">
+						<div class="font">heritage v-neck tee</div>
+						    <p>fit, fabric and perfect proportions are what we're going after here - just the right length and weight to layer. the "V" isn't too high or too low - just right.<span>$20</span></p>
+							<div class="tated3" style="background-image:url(./img/circle.jpg)"></div>
+							<div class="tated23"></div>
+						</div>
+						<div class="tights">
+						<div class="font">comer 608 slim fit chino</div>
+						    <p>made with a much denser cotton twill you can hear every step of the way. and like your favorite jeans. you'll need to break them in the old-fashioned way - by wearing them everywhere.<span>$58</span></p>
+							<div class="tated4" style="background-image:url(./img/circle.jpg)"></div>
+							<div class="tated24"></div>
+						</div>
+				        
+				</div>
+					     	</div>
+					    </div> 
+					   
+					    
+					</li>
+					<li>
+					    <div class="dtext2"> 
+                                            <div class="descript">You can move mountains</div>
+					    <div class="descriptsmall"><p> <span>Attire such as this would be appropriate for an excursion to the Rockies! In the slight possibility of snow fall, you will be prepared with your thick toggle coat faith-
+fully keeping you warm. A touch of Paul Bunyans plaid, boots from a woodsman's closet and you re ready to go! Taking the summits by storm (all pun intended)  </span></div>					    
+		                            <span class="shopbutton"><a href="#" title="Shop this look">shop</a></span>
+					    <div class="hh">
+             <div class="left_text" >           
+                        
+						<div class="pocket">
+						    <div class="font">peanut suede vibram sole trail oxford</div>
+						    <p>the highest standard of production are employed to yield shoes that are as durable as they are comfortable. each pair make use of replaceable outsoles, a feature normally reserved for formal footwear, to ensure a lifetime of wear.<span> $302</span></p>
+							<div class="tated6" style="background-image:url(./img/circle.jpg)"></div>
+							<div class="tated26"></div>
+						</div>
+							
+               </div>         
+                        
+                        
+                        <div class="center_image">
+						<img src="img/sundaybrunch.png" alt="Third Image" />
+						</div>
+                        
+                        
+                        <div class="right_text">
+                        <div class="boots">
+						    <div class="font">wool duffle coat</div>
+						    <p>dense, heavyweight wool fabric blend. traditional duffle jacket design finished with authentic details throughout. <span>$250</span></p>
+							<div class="tated7" style="background-image:url(./img/circle.jpg)"></div>
+							<div class="tated27"></div>
+						</div>
+                        
+					    <div class="perfect">
+                        
+                        
+                        
+						<div class="font">rugged twill workshirt</div>
+						    <p>gutsy twill fabric that has a more rugged hand feel. outfitted with traditional workshirt details. goes everywhere form your basement workroom to a night out. <span>$60</span></p>
+							<div class="tated8" style="background-image:url(./img/circle.jpg)"></div>
+							<div class="tated28"></div>
+						</div>
+						<div class="kneehighs">
+						    <div class="font">comer 608 slim fit chino</div>
+						    <p>made with a much denser cotton twill you can hear every step of the way. and like your favorite jeans. you'll need to break them in the old-fashioned way - by wearing them everywhere.<span>$58</span></p>
+							<div class="tated9" style="background-image:url(./img/circle.jpg)"></div>
+							<div class="tated29"></div>
+						</div>    
+					    </div>
+					    </div>
+					    </div> 
+					    
+					</li>
+					<li>
+					    <div class="dtext3"> 
+                                            <div class="descript">Calm, Cool, and Collegiate  </div>
+					    <div class="descriptsmall">
+						
+	<p>You registered for the semester, got all your books, supplies and schedule yet you don't know what to wear! The classic cardigan over variations of blue further clarify your sophisticated taste. With a bag to carry all your necessities from class to class, and dress shoes that say you didn't rush, you will be the surprise of the new school year! Whether you're studying in the library, aiding a teacher's class or making a speech in the auditorium, you will be ready and as dapper as ever! </p>
+						
+						</div>					    
+                                            <span class="shopbutton"><a href="#" title="Shop this look">shop</a></span>
+					     <div class="hh">
+                <div class="left_text" >           
+					    <div class="theperfecttee">
+						<div class="font">canvas 1963 trip bag </div>
+						    <p>we challenge you to find something this bag can't carry. unzip the external side pocket and drop your phone in the cell sleeve, your MP3 player in the pocket next to it, work disks in the external snap pockets, and whatever else you've got in the main interior area <span>$140</span></p>
+							<div class="tated10" style="background-image:url(./img/circle.jpg)"></div>
+							<div class="tated30"></div>
+						</div>
+						<div class="bracelet">
+						    <div class="font">allen edmonds mctavish wingtip shoes</div>
+						    <p>a handcrafted balmoral brouge from our friend (and fellow wisconsinites) at Allen Edmonds. detailed with an eye- catching toe medallion as well a brogueing on the wing, throat and backstay to make it dressy enough for business, but casual by design. Crafted from waxy distressed leather and a single split reverse leather sole that truly sets them apart and make them an instant classic. <span>$295</span></p>
+							<div class="tated11" style="background-image:url(./img/circle.jpg)"></div>
+							<div class="tated31"></div>
+						</div>	
+                        </div>
+				  	      <!--div class="simpletote">
+						    <p>These designes are representive of information architecture, indicating priority and layout of page components. They do not constitute the final look or feel of the site designe. <span>$60</span></p>
+						</div-->	
+                        <div class="center_image">				
+						<img src="img/bookclub.png" alt="Forth Image" />
+						</div>
+						<!--div class="scarling">
+						    <p>These designes are representive of information architecture, indicating priority and layout of page components. They do not constitute the final look or feel of the site designe. <span>$60</span></p>
+						</div-->
+                         <div class="right_text">
+						<div class="cardigan">
+						     <div class="font">heritage end-on-end poplin shirt</div>
+						    <p>simple and straightforward with careful attention to every detail. unique end-on-end weave that blends color with hints of white. soft sueded cotton poplin fabric is the right weight. collar placket and sleeves are perfectly proportioned. <span>$50</span></p>
+							<div class="tated12" style="background-image:url(./img/circle.jpg)"></div>
+							<div class="tated32"></div>
+						</div>    	    
+						<div class="favoritedenim">
+						    <div class="font">men's supima houndstooth cardigan</div>
+						    <p>refind details but designed to look and feel more casual. knit from the softest Supima cotton in a lighter-weight V-neck cardigan design. cut with a modern, close-to-the-body fit <span>$70</span></p>
+							<div class="tated13" style="background-image:url(./img/circle.jpg)"></div>
+							<div class="tated33"></div>
+						</div> 	    
+						<div class="blackflats">
+						     <div class="font">elston 608 slim fit chino</div>
+						    <p>designed to work with you and for you. cut from soft cotton twill that always goes with the flow. finished with more refined details normally found on suiting styles.<span> $60</span></p>
+							<div class="tated14" style="background-image:url(./img/circle.jpg)"></div>
+							<div class="tated34"></div>
+						</div> 	    
+							    </div>
+						</div>
+                                            </div>
+					</li>
+					
+
+				</ul>
+				</div>
+				<div class="pxs_navigation">
+					<span class="pxs_next" style="top: 0px;"></span>
+					<span class="pxs_prev" style="top: 0px;"></span>
+				</div>
+				<ul class="pxs_thumbnails">
+					<li><img src="images/thumbs/1.jpg" alt="First Image" /></li>
+					<li><img src="images/thumbs/2.jpg" alt="Second Image" /></li>
+					<li><img src="images/thumbs/3.jpg" alt="Third Image" /></li>
+					<li><img src="images/thumbs/4.jpg" alt="Forth Image" /></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="footer">
+		</div>
+
+		<!-- JavaScript -->
+
+        <script type="text/javascript">
+			(function($) {
+				$.fn.parallaxSlider = function(options) {
+					var opts = $.extend({}, $.fn.parallaxSlider.defaults, options);
+					return this.each(function() {
+						var $pxs_container 	= $(this),
+						o 				= $.meta ? $.extend({}, opts, $pxs_container.data()) : opts;
+						
+						//Основной слайдер
+						var $pxs_slider		= $('.pxs_slider',$pxs_container),
+						//Элементы в слайдере
+						$elems			= $pxs_slider.children(),
+						//Общее количество элементов
+						total_elems		= $elems.length,
+						//Кнопки навигации
+						$pxs_next		= $('.pxs_next',$pxs_container),
+						$pxs_prev		= $('.pxs_prev',$pxs_container),
+						//Фоновые изображения
+						$pxs_bg1		= $('.pxs_bg1',$pxs_container),
+						$pxs_bg2		= $('.pxs_bg2',$pxs_container),
+						$pxs_bg3		= $('.pxs_bg3',$pxs_container),
+						$pxs_bg4		= $('.pxs_bg4',$pxs_container),
+						//Текущее изображение
+						current			= 0,
+						//Контейнер миниатюр
+				//    $pxs_thumbnails = $('.pxs_thumbnails',$pxs_container),
+						//Миниатюры
+				//		$thumbs			= $pxs_thumbnails.children(),
+						//Интервал для режима автопроигрывания
+						slideshow,
+						//Загрузка изображения
+						$pxs_loading	= $('.pxs_loading',$pxs_container),
+						$pxs_slider_wrapper = $('.pxs_slider_wrapper',$pxs_container);
+							
+						
+						var loaded		= 0,
+						$images		= $pxs_slider_wrapper.find('img');
+							
+						$images.each(function(){
+							var $img	= $(this);
+							$('<img/>').load(function(){
+								++loaded;
+								if(loaded	== total_elems*2){
+									$pxs_loading.hide();
+									$pxs_slider_wrapper.show();
+										
+									
+									var one_image_w		= $pxs_slider.find('img:first').width();
+							
+								
+									setWidths($pxs_slider,
+									$elems,
+									total_elems,
+									$pxs_bg1,
+									$pxs_bg2,
+									$pxs_bg3,
+									$pxs_bg4,
+									one_image_w,
+									$pxs_next,
+									$pxs_prev);
+							
+								/*	$pxs_thumbnails.css({
+										'width'			: one_image_w + 'px',
+										'margin-left' 	: -one_image_w/2 + 'px'
+									});
+									var spaces	= one_image_w/(total_elems+1);
+									$thumbs.each(function(i){
+										var $this 	= $(this);
+										var left	= spaces*(i+1) - $this.width()/2;
+										$this.css('left',left+'px');
+											
+										if(o.thumbRotation){
+											var angle 	= Math.floor(Math.random()*41)-20;
+											$this.css({
+												'-moz-transform'	: 'rotate('+ angle +'deg)',
+												'-webkit-transform'	: 'rotate('+ angle +'deg)',
+												'transform'			: 'rotate('+ angle +'deg)'
+											});
+										}*/
+									
+							/*			$this.bind('mouseenter',function(){
+											$(this).stop().animate({top:'-10px'},100);
+										}).bind('mouseleave',function(){
+											$(this).stop().animate({top:'0px'},100);
+										});
+									});*/
+										
+								
+								//	highlight($thumbs.eq(0));
+										
+									
+									$pxs_next.bind('click',function(){
+										++current;
+										if(current >= total_elems)
+											if(o.circular)
+												current = 0;
+										else{
+											--current;
+											return false;
+										}
+		                                                                $(".nav li.active").removeClass("active").css('font-weight', 'normal');
+										$(".nav li").eq(current).addClass("active").css('font-weight', 'bold');
+										 $('.pxs_slider_wrapper .hh').css('display', 'none');
+										 setTimeout(function() { $('ul.pxs_slider li.first .f img, .pxs_slider_wrapper li.first #container').stop().css('opacity', '0');}, 1100);
+										 
+										slide(current,
+										$pxs_slider,
+										$pxs_bg4,
+										$pxs_bg3,
+										$pxs_bg2,
+										$pxs_bg1,
+										o.speed,
+										o.easing,
+										o.easingBg);										
+										
+									});
+									$pxs_prev.bind('click',function(){
+										--current;
+										if(current < 0)
+											if(o.circular)
+												current = total_elems - 1;
+										else{
+											++current;
+											return false;
+										}
+										$(".nav li.active").removeClass("active").css('font-weight', 'normal');
+										$(".nav li").eq(current).addClass("active").css('font-weight', 'bold');
+                                        $('.pxs_slider_wrapper .hh').css('display', 'none');
+										setTimeout(function() { $('ul.pxs_slider li.first .f img, .pxs_slider_wrapper li.first #container').stop().css('opacity', '0');}, 1100);
+										slide(current,
+										$pxs_slider,
+										$pxs_bg4,
+										$pxs_bg3,
+										$pxs_bg2,
+										$pxs_bg1,
+										o.speed,
+										o.easing,
+										o.easingBg);								
+										
+									});
+									
+									/*swipe event*/
+									
+									$(document).touchSwipeLeft(function(){
+										++current;
+										if(current >= total_elems)
+											if(o.circular)
+												current = 0;
+										else{
+											--current;
+											return false;
+										}
+		                                                                $(".nav li.active").removeClass("active").css('font-weight', 'normal');
+										$(".nav li").eq(current).addClass("active").css('font-weight', 'bold');
+										 $('.pxs_slider_wrapper .hh').css('display', 'none');
+										 setTimeout(function() { $('ul.pxs_slider li.first .f img, .pxs_slider_wrapper li.first #container').stop().css('opacity', '0');}, 1100);
+										 
+										slide(current,
+										$pxs_slider,
+										$pxs_bg4,
+										$pxs_bg3,
+										$pxs_bg2,
+										$pxs_bg1,
+										o.speed,
+										o.easing,
+										o.easingBg);								
+										
+									});
+									
+									
+									/*swipe event*/
+									$(document).touchSwipeRight(function(){
+										--current;
+										if(current < 0)
+											if(o.circular)
+												current = total_elems - 1;
+										else{
+											++current;
+											return false;
+										}
+										$(".nav li.active").removeClass("active").css('font-weight', 'normal');
+										$(".nav li").eq(current).addClass("active").css('font-weight', 'bold');
+                                        $('.pxs_slider_wrapper .hh').css('display', 'none');
+										setTimeout(function() { $('ul.pxs_slider li.first .f img, .pxs_slider_wrapper li.first #container').stop().css('opacity', '0');}, 1100);
+										slide(current,
+										$pxs_slider,
+										$pxs_bg4,
+										$pxs_bg3,
+										$pxs_bg2,
+										$pxs_bg1,
+										o.speed,
+										o.easing,
+										o.easingBg);								
+										
+									});
+									
+									
+									
+									
+									
+									
+							
+									
+								/*	$thumbs.bind('click',function(){
+										var $thumb	= $(this);
+							    
+										highlight($thumb);
+					
+										if(o.auto)
+											clearInterval(slideshow);
+										current 	= $thumb.index();
+										slide(current,
+										$pxs_slider,
+										$pxs_bg3,
+										$pxs_bg2,
+										$pxs_bg1,
+										o.speed,
+										o.easing,
+										o.easingBg);
+									});*/
+							
+				
+							$(".nav a").bind("click",function(){
+							     var a = $(this).parents('li');
+							     var b = parseInt(a.index(),10);
+							    $(".nav li.active").removeClass("active").css('font-weight', 'normal'), a.addClass("active").css('font-weight', 'bold');
+							     $('.pxs_slider_wrapper .hh').css('display', 'none');
+								 $('ul.pxs_slider li.first .f img, .pxs_slider_wrapper li.first #container').css('opacity', '0');
+								 setTimeout(function() { $('ul.pxs_slider li.first .f img, .pxs_slider_wrapper li.first #container').stop().css('opacity', '0');}, 3000);
+								 
+							    	    	if(o.auto)
+										clearInterval(slideshow);
+										current 	= b;
+										slide(current,
+										$pxs_slider,
+										$pxs_bg4,
+										$pxs_bg3,
+										$pxs_bg2,
+										$pxs_bg1,
+										o.speed,
+										o.easing,
+										o.easingBg);
+							});
+							    
+									
+									if(o.auto != 0){
+										o.circular	= true;
+										slideshow	= setInterval(function(){
+											$pxs_next.trigger('click');
+										},o.auto);
+									}
+							
+									
+									$(window).resize(function(){
+										w_w	= $(window).width();
+										setWidths($pxs_slider,$elems,total_elems,$pxs_bg1,$pxs_bg2,$pxs_bg3, $pxs_bg4, one_image_w,$pxs_next,$pxs_prev);
+										slide(current,
+										$pxs_slider,
+										$pxs_bg4,
+										$pxs_bg3,
+										$pxs_bg2,
+										$pxs_bg1,
+										1,
+										o.easing,
+										o.easingBg);
+									});
+
+								}
+							}).error(function(){
+								alert('here')
+							}).attr('src',$img.attr('src'));
+						});
+							
+							
+							
+					});
+				};
+				
+				//Текущая ширина окна
+				var w_w				= $(window).width();
+				
+				var slide			= function(current,
+				$pxs_slider,
+				$pxs_bg4,
+				$pxs_bg3,
+				$pxs_bg2,
+				$pxs_bg1,
+				speed,
+				easing,
+				easingBg){
+				    
+				    setTimeout(function() {
+     
+      $('.pxs_slider_wrapper .hh').fadeIn();
+	   $('ul.pxs_slider li.first .f img, .pxs_slider_wrapper li.first #container').animate({opacity:1});
+}, 3200);
+				    
+				    
+					var slide_to	= parseInt(-w_w * current);
+					$pxs_slider.stop().animate({
+						left	: slide_to + 'px'
+					},speed, easing);
+          		                $pxs_bg4.stop().animate({
+						left	: slide_to *2.5 + 'px'
+					},speed, easingBg);
+					$pxs_bg3.stop().animate({
+						left	: slide_to*4 + 'px'
+					},speed, easingBg);
+					$pxs_bg2.stop().animate({
+						left	: slide_to*8 + 'px'
+					},speed, easingBg);
+					$pxs_bg1.stop().animate({
+						left	: slide_to*16 + 'px'
+					},speed, easingBg);
+				}
+				
+				var highlight		= function($elem){
+					$elem.siblings().removeClass('selected');
+					$elem.addClass('selected');
+				}
+				
+				var setWidths		= function($pxs_slider,
+				$elems,
+				total_elems,
+				$pxs_bg1,
+				$pxs_bg2,
+				$pxs_bg3,
+				$pxs_bg4,
+				one_image_w,
+				$pxs_next,
+				$pxs_prev){
+				
+					var pxs_slider_w	= w_w * total_elems;
+					//alert(w_w);
+					$pxs_slider.width(pxs_slider_w + 'px');
+				
+					$elems.width(w_w + 'px');
+				
+					$pxs_bg1.width(pxs_slider_w/total_elems + 'px');
+					$pxs_bg2.width(pxs_slider_w*total_elems + w_w + 'px');
+					$pxs_bg3.width(pxs_slider_w*total_elems + w_w+ 'px');
+					$pxs_bg4.width(pxs_slider_w*total_elems + 20  + 'px');
+				/*	var spaces	= one_image_w/(total_elems-1);
+					$pxs_bg4.width(pxs_slider_w/(total_elems+1) + 'px');*/
+				
+				//	var position_nav	= w_w/2 - one_image_w/2 + 3;
+					$pxs_next.css('right', 40);
+					$pxs_prev.css('left', 40);
+				    
+				}
+				
+				$.fn.parallaxSlider.defaults = {
+					auto			: 0,	//
+											//
+					speed			: 2400,//
+					easing			: 'jswing',//
+					easingBg		: 'jswing',//
+					circular		: true,//
+					thumbRotation	: false//
+
+				};
+				//easeInOutExpo,easeInBack
+				
+				
+				
+			})(jQuery);
+		</script>
+
+		<script type="text/javascript">
+			$(function() {
+				var $pxs_container	= $('#pxs_container');
+				$pxs_container.parallaxSlider();
+			});
+			
+			//show arrows only on hover
+$(".pxs_navigation span.pxs_next, .pxs_navigation span.pxs_prev").hover(
+  function () {
+    $(this).animate({opacity: 1});
+  }, 
+  function () {
+   $(this).animate({opacity: 0});
+  }
+);
+
+
+
+
+
+        </script>
+        <footer>
+		<div class="socplugins">
+
+		  <div>
+		  <!--fb tag-->
+		 <div class="fb-like" data-href="http://canvas.landsend.com/canvas/index.html" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+		  </div>
+		  <div>
+		    <div class="g-plusone"></div>
+		  
+		  </div> 
+		  
+		</div>
+	</footer>
+    </div>
+        </div><!-- global end -->
+    </body>
+</html>
